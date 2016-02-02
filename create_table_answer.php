@@ -12,6 +12,6 @@ $sql = "CREATE TABLE answer
   content varchar(1000) not NULL,
   data timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8";
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
 mysql_query($sql,$con);
  ?>

@@ -7,7 +7,7 @@ mysqli_select_db("zhishu_db",$con);
 $sql = "CREATE TABLE token
 (
   token varchar(64) DEFAULT NULL;
-  personId int(11) NOT NULL;
+  userId int(11) NOT NULL;
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8";
 mysql_query($sql,$con);
 mysql_close($con);

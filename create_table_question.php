@@ -11,8 +11,10 @@ $sql = "CREATE TABLE question
   answerCount int(2) NOT NULL,
   title varchar(255) NOT NULL,
   content varchar(255) NOT NULL,
-
-)";
+  data timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  bestAnswerId int(11) NOT NULL,
+  authorId int(11) NOT NULL
+)ENGINE=MyISAM DEFAULT CHARSET=utf8";
 mysql_query($sql,$con);
 mysql_close($con);
  ?>
