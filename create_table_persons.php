@@ -5,7 +5,7 @@ if (!$con) {
 }
 mysql_select_db("zhishu_db",$con);
 $sql = "CREATE TABLE person (
-id int NOT NULL AUTO_INCREMENT,
+id int(10) unsigned NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(id),
 name varchar(16) NOT NULL,
 password varchar(16) NOT NULL,
