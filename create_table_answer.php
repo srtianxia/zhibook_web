@@ -3,6 +3,7 @@ $con = mysql_connect("localhost","root","19951024");
 if (!$con) {
   die("could not connect:".mysql_error());
 }
+mysql_select_db("zhishu_db",$con);
 $sql = "CREATE TABLE answer
 (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
