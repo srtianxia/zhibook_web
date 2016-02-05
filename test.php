@@ -11,7 +11,7 @@
 
 	$sql = "SELECT question.id, question.answerCount, question.title, question.content,
 	question.data, question.bestAnswerId, person.name as authorName,
-	person.headurl as authorHead FROM question INNER JOIN person ON person.id = question.authorId ";
+	person.headurl as authorHead FROM question INNER JOIN person ON person.id = question.authorId";
 
 	$result = mysql_query($sql);
 
