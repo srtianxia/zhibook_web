@@ -1,15 +1,15 @@
 <?php
 include("connect.php");
 include("token.php");
-$questionId = addslashes($_POST("questionId"));
-$content = addslashes($_POST("content"));
+$questionId = addslashes($_POST["questionId"]);
+$content = addslashes($_POST["content"]);
 $authorId = checkToken(addslashes($_POST["token"]),$returnData);
 if ($authorId == -1) {
   echo json_encode($returnData);
   return;
 }
 $sql = "INSERT INTO answer (authorId, questionId, content, data)
-VALUES('{$authorId}', '{$questionId}','{$content}',now())";
+VALUES('".$authorId."', '".$questionId."','{$content}',now())";
 if (mysql_query($sql)) {
 		$returnData["info"] = $sql;
 	}else{
