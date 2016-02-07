@@ -11,7 +11,7 @@ if ($authorId == -1) {
 $sql = "INSERT INTO answer (authorId, questionId, content, data)
 VALUES('".$authorId."', '".$questionId."','{$content}',now())";
 if (mysql_query($sql)) {
-    $update = "UPDATE question SET answerCount=answerCount+1 , recent = now() WHERE id = {$questionId}";
+    $update = "UPDATE question SET answerCount=answerCount+1 WHERE id = {$questionId}";
 		mysql_query($update);
 		$returnData["info"] = $sql;
 	}else{
