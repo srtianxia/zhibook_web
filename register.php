@@ -3,6 +3,7 @@
 
  $name = addslashes($_POST["name"]);
  $password = addslashes($_POST["password"]);
+ $headurl = addslashes($_POST["headurl"]);
 
  if ($name == "" || $password == "") {
  	header("http/1.1 400 Bad Request");
@@ -14,7 +15,7 @@
  		header("http/1.1 400 Bad Request");
  		$result["info"] =  $name." 已被使用";
  	}else{
-		$query = "INSERT INTO person ( name , password ) VALUES ( '".$name."' , '".$password."' )";
+		$query = "INSERT INTO person ( name , password ,headurl) VALUES ( '".$name."' , '".$password."' , '".$headurl."' )";
 		 if (mysql_query($query)) {
 		 	$result["info"] =  $query;
 		 }else{
