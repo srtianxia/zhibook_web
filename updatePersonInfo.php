@@ -3,6 +3,7 @@ include("connect.php");
 include("token.php");
 $headurl = addslashes($_POST["headurl"]);
 $token = addslashes($_POST["token"]);
+$sign = addslashes($_POST["sign"]);
 $authorId = checkToken($token,$returnData);
 if ($authorId == -1) {
   echo json_encode($returnData);
