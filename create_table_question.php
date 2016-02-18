@@ -4,8 +4,7 @@ if (!$con) {
   die("could not connect :". mysql_error());
 }
 mysql_select_db("zhishu_db",$con);
-$sql = "CREATE TABLE question
-(
+$sql = "CREATE TABLE question(
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
   PRIMARY KEY(id),
   answerCount int(2) DEFAULT '0',
